@@ -219,13 +219,12 @@ iot-attack-detection/
 ---
 
 ## Contexte académique
-
 Ce projet a été réalisé dans un environnement expérimental isolé — réseau privé, aucun dispositif exposé sur Internet. Toutes les attaques ont été conduites à des fins de recherche uniquement.
 ---
 
 ## Références
 
-- Fiche technique ACS712 — Allegro MicroSystems https://www.allegromicro.com/~/media/files/datasheets/acs712-datasheet.ashx
+- Fiche technique ACS712 - Allegro MicroSystems https://www.allegromicro.com/~/media/files/datasheets/acs712-datasheet.ashx
 - Getting started with Raspberry Pi - https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started
 - Using Python and an Arduino to Read a Sensor - https://pythonforundergradengineers.com/python-arduino-potentiometer.html#connect-the-arduino-to-the-computer-and-check-the-com-port
 - Documentation Wireshark - https://www.wireshark.org/docs/
