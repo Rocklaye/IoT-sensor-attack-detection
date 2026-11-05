@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 820 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Topologie du réseau de laboratoire IoT — PC Ubuntu central connecté via Ethernet à Raspberry Pi, Caméra IP et Kali Linux, et via USB à l'Arduino" style="max-width:100%;height:auto;background:#0d1117;border-radius:10px;display:block;">
+  <defs>
+    <!-- Arrowhead marker -->
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#58a6ff"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#f0883e"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#3fb950"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" fill="#bc8cff"/>
+    </marker>
+    <!-- Drop shadow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- ═══ PC UBUNTU — centre/hub ═══ -->
+  <rect x="280" y="20" width="260" height="100" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="2" filter="url(#glow)"/>
+  <rect x="280" y="20" width="260" height="28" rx="10" fill="#1f4b7c"/>
+  <rect x="280" y="38" width="260" height="10" fill="#1f4b7c"/>
+  <text x="410" y="40" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#58a6ff" text-anchor="middle" letter-spacing="0.5">PC de surveillance</text>
+  <text x="410" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" fill="#c9d1d9" text-anchor="middle">Ubuntu 22.04 LTS</text>
+  <text x="410" y="78" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Wireshark · Arduino IDE 2.3.7</text>
+  <text x="410" y="95" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#3fb950" text-anchor="middle">eth0 10.42.0.1 (hotspot) · wlan0 "shadow"</text>
+
+  <!-- ═══ HOTSPOT DHCP badge ═══ -->
+  <rect x="330" y="130" width="160" height="22" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="410" y="145" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">NetworkManager DHCP 10.42.0.1/24</text>
+
+  <!-- ═══ Ethernet lines from PC to hub ═══ -->
+  <!-- line center down to hub badge -->
+  <line x1="410" y1="120" x2="410" y2="130" stroke="#58a6ff" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ═══ RASPBERRY PI ═══ -->
+  <rect x="80" y="230" width="195" height="100" rx="10" fill="#161b22" stroke="#3fb950" stroke-width="2" filter="url(#glow)"/>
+  <rect x="80" y="230" width="195" height="28" rx="10" fill="#1a3d26"/>
+  <rect x="80" y="248" width="195" height="10" fill="#1a3d26"/>
+  <text x="177" y="250" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#3fb950" text-anchor="middle">Raspberry Pi 4</text>
+  <text x="177" y="270" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#c9d1d9" text-anchor="middle">Debian Bookworm · SSH :22</text>
+  <text x="177" y="286" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">eth0 · 10.42.0.241</text>
+  <text x="177" y="301" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">wlan0 · réseau "shadow"</text>
+  <text x="177" y="317" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#f85149" text-anchor="middle">pi:123456 (intentionnel)</text>
+
+  <!-- ═══ CAMERA IP ═══ -->
+  <rect x="313" y="310" width="195" height="110" rx="10" fill="#161b22" stroke="#f0883e" stroke-width="2" filter="url(#glow)"/>
+  <rect x="313" y="310" width="195" height="28" rx="10" fill="#3d2814"/>
+  <rect x="313" y="328" width="195" height="10" fill="#3d2814"/>
+  <text x="410" y="330" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#f0883e" text-anchor="middle">Caméra IP Hosafe HX-2PT1</text>
+  <text x="410" y="352" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#c9d1d9" text-anchor="middle">Wi-Fi "shadow" · HTTP :80 · RTSP :554</text>
+  <text x="410" y="368" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">10.42.0.234 (wlan)</text>
+  <text x="410" y="384" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">192.168.137.41 (alias admin)</text>
+  <text x="410" y="400" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#f85149" text-anchor="middle">Auth Basic HTTP en clair</text>
+  <text x="410" y="413" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#f85149" text-anchor="middle">Pas de verrouillage de compte</text>
+
+  <!-- ═══ KALI LINUX ═══ -->
+  <rect x="545" y="230" width="195" height="100" rx="10" fill="#161b22" stroke="#bc8cff" stroke-width="2" filter="url(#glow)"/>
+  <rect x="545" y="230" width="195" height="28" rx="10" fill="#2d1f4a"/>
+  <rect x="545" y="248" width="195" height="10" fill="#2d1f4a"/>
+  <text x="642" y="250" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#bc8cff" text-anchor="middle">Kali Linux</text>
+  <text x="642" y="270" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#c9d1d9" text-anchor="middle">Hydra · hping3 · aireplay-ng</text>
+  <text x="642" y="286" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">eth0 · 10.42.0.11</text>
+  <text x="642" y="301" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">wlan1 · Alfa AWUS036ACS</text>
+  <text x="642" y="317" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">Attaquant</text>
+
+  <!-- ═══ ARDUINO ═══ -->
+  <rect x="600" y="380" width="185" height="80" rx="10" fill="#161b22" stroke="#e3b341" stroke-width="2" filter="url(#glow)"/>
+  <rect x="600" y="380" width="185" height="26" rx="10" fill="#3d2e00"/>
+  <rect x="600" y="396" width="185" height="10" fill="#3d2e00"/>
+  <text x="692" y="398" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#e3b341" text-anchor="middle">Arduino Uno</text>
+  <text x="692" y="418" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#c9d1d9" text-anchor="middle">ACS712 · /dev/ttyACM0</text>
+  <text x="692" y="434" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">9600 bauds · mesure courant</text>
+  <text x="692" y="450" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#e3b341" text-anchor="middle">USB série vers PC</text>
+
+  <!-- ═══ POOL MINAGE ═══ -->
+  <rect x="80" y="390" width="175" height="60" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="167" y="413" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="700" fill="#f85149" text-anchor="middle">Pool minage XMR</text>
+  <text x="167" y="430" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">rx.unmineable.com</text>
+  <text x="167" y="445" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">209.38.61.60 (externe)</text>
+
+  <!-- ═══ WI-FI AP "shadow" ═══ -->
+  <ellipse cx="410" cy="500" rx="130" ry="25" fill="#161b22" stroke="#58a6ff" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="410" y="497" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="600" fill="#58a6ff" text-anchor="middle">Wi-Fi "shadow"</text>
+  <text x="410" y="511" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">BSSID 10:68:38:B2:58:EB · ch.6 · WPA2</text>
+
+  <!-- ═══════════ CONNEXIONS ═══════════ -->
+
+  <!-- PC → Raspberry Pi : Ethernet hotspot -->
+  <line x1="280" y1="85" x2="177" y2="230" stroke="#3fb950" stroke-width="1.8" marker-end="url(#arr-green)"/>
+  <rect x="168" y="145" width="90" height="18" rx="4" fill="#0d1117"/>
+  <text x="213" y="158" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">Ethernet</text>
+
+  <!-- PC → Kali : Ethernet hotspot -->
+  <line x1="540" y1="85" x2="642" y2="230" stroke="#bc8cff" stroke-width="1.8" marker-end="url(#arr-purple)"/>
+  <rect x="560" y="143" width="90" height="18" rx="4" fill="#0d1117"/>
+  <text x="605" y="156" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">Ethernet</text>
+
+  <!-- PC → Arduino : USB -->
+  <line x1="540" y1="70" x2="692" y2="380" stroke="#e3b341" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#arr)"/>
+  <rect x="638" y="195" width="60" height="18" rx="4" fill="#0d1117"/>
+  <text x="668" y="208" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#e3b341" text-anchor="middle">USB série</text>
+
+  <!-- Raspberry Pi → Wi-Fi AP -->
+  <line x1="220" y1="330" x2="310" y2="492" stroke="#58a6ff" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+
+  <!-- Caméra IP → Wi-Fi AP -->
+  <line x1="410" y1="420" x2="410" y2="475" stroke="#f0883e" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arr-orange)"/>
+  <rect x="415" y="443" width="68" height="16" rx="4" fill="#0d1117"/>
+  <text x="449" y="455" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Wi-Fi 802.11n</text>
+
+  <!-- Raspberry Pi → Pool minage (NAT) -->
+  <line x1="130" y1="330" x2="130" y2="390" stroke="#f85149" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arr)"/>
+  <rect x="60" y="355" width="130" height="16" rx="4" fill="#0d1117"/>
+  <text x="125" y="367" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#f85149" text-anchor="middle">XMRig (NAT ponctuel)</text>
+
+  <!-- Kali wlan1 → Wi-Fi AP deauth -->
+  <line x1="600" y1="330" x2="510" y2="490" stroke="#bc8cff" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-purple)"/>
+  <rect x="535" y="395" width="85" height="16" rx="4" fill="#0d1117"/>
+  <text x="577" y="407" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">deauth flood</text>
+
+  <!-- Wireshark capture label on eth0 line -->
+  <rect x="232" y="118" width="88" height="16" rx="4" fill="#1f4b7c"/>
+  <text x="276" y="130" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">Wireshark eth0</text>
+
+  <!-- PC wlan0 → Wi-Fi AP badge -->
+  <line x1="410" y1="120" x2="410" y2="475" stroke="#58a6ff" stroke-width="1" stroke-dasharray="3,5" opacity="0.4"/>
+
+  <!-- Légende -->
+  <rect x="22" y="22" width="230" height="130" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="35" y="42" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="700" fill="#c9d1d9">Légende</text>
+  <line x1="35" y1="58" x2="65" y2="58" stroke="#3fb950" stroke-width="2"/>
+  <text x="72" y="62" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e">Ethernet filaire</text>
+  <line x1="35" y1="78" x2="65" y2="78" stroke="#f0883e" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="72" y="82" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e">Wi-Fi 802.11n</text>
+  <line x1="35" y1="98" x2="65" y2="98" stroke="#e3b341" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="72" y="102" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e">USB série</text>
+  <line x1="35" y1="118" x2="65" y2="118" stroke="#f85149" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="72" y="122" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e">NAT ponctuel (XMRig)</text>
+  <line x1="35" y1="138" x2="65" y2="138" stroke="#bc8cff" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="72" y="142" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e">Attaque Wi-Fi (deauth)</text>
+</svg>
