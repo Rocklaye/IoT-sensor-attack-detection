@@ -225,7 +225,7 @@ iot-sensor-attack-detection/
 
 ## Contexte académique
 
-Ce projet a été réalisé dans le cadre du cours **8INF917 — Sécurité informatique pour l'Internet des objets** à l'Université du Québec à Chicoutimi (UQAC), Hiver 2026. L'environnement expérimental était isolé (réseau privé, aucun dispositif exposé sur Internet) et toutes les attaques ont été effectuées à des fins pédagogiques uniquement.
+Ce projet a été réalisé en contexte academique. L'environnement expérimental était isolé (réseau privé, aucun dispositif exposé sur Internet) et toutes les attaques ont été effectuées à des fins pédagogiques uniquement.
 
 ---
 
