@@ -1,15 +1,9 @@
-# Détection d'attaques sur capteurs IoT — Analyse énergétique et trafic réseau
-
-> **Mots-clés :** sécurité IoT · capteurs connectés · bâtiment intelligent · Linux embarqué · surveillance réseau · détection d'anomalies  
-> **Projet académique** — 8INF917 Sécurité IoT | UQAC (Hiver 2026)  
-> **Auteurs :** Abdoulaye Aw, Tchakouani Noukam E. Armandine, Fatimata Ndiaya Sall, Maha El Allem  
-> **Superviseur :** Prof. Fehmi Jaafar
-
+# Détection d'attaques sur capteurs IoT - Analyse énergétique et trafic réseau
 ---
 
 ## Le problème
 
-Les bâtiments intelligents utilisent des dizaines de capteurs IoT connectés en permanence — caméras IP, capteurs de température, passerelles Linux embarquées. Ces dispositifs sont rarement surveillés pour détecter des intrusions ou des comportements anormaux. La raison principale : **on ne peut pas installer un agent de sécurité classique dessus** — ils sont trop limités en ressources, tournent sur des firmwares propriétaires, et sont souvent oubliés une fois déployés.
+Les bâtiments intelligents utilisent des dizaines de capteurs IoT connectés en permanence : caméras IP, capteurs de température, passerelles Linux embarquées. Ces dispositifs sont rarement surveillés pour détecter des intrusions ou des comportements anormaux. La raison principale : **on ne peut pas installer un agent de sécurité classique dessus**,   ils sont trop limités en ressources, tournent sur des firmwares propriétaires, et sont souvent oubliés une fois déployés.
 
 **Question de recherche : peut-on détecter une cyberattaque sur un capteur IoT sans jamais toucher au dispositif lui-même ?**
 
@@ -152,7 +146,7 @@ Anomalie réseau **+** pic énergétique corrélé → haute confiance, peu de f
 
 ---
 
-## Sketch Arduino — Mesure de courant
+## Sketch Arduino - Mesure de courant
 
 ```cpp
 float BIAS = 0.007;  // Décalage de calibration mesuré empiriquement (volts)
