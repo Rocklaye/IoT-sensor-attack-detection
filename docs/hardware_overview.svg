@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Montage matériel : dispositif IoT relié au capteur ACS712 sur le fil d'alimentation, lui-même connecté à l'Arduino Uno via USB au PC Ubuntu">
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0,7 3,0 6" fill="#8b949e"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0,7 3,0 6" fill="#f85149"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0,7 3,0 6" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="700" height="160" fill="#0d1117"/>
+
+  <!-- DISPOSITIF IoT -->
+  <rect x="20" y="50" width="130" height="60" rx="8" fill="#161b22" stroke="#f0883e" stroke-width="2"/>
+  <text x="85" y="76" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#f0883e" text-anchor="middle">Dispositif IoT</text>
+  <text x="85" y="93" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Caméra / Raspberry Pi</text>
+  <text x="85" y="107" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Alimentation USB-C 5V</text>
+
+  <!-- flèche IoT → ACS712 (fil coupé, rouge) -->
+  <line x1="150" y1="80" x2="218" y2="80" stroke="#f85149" stroke-width="2" marker-end="url(#arr-red)"/>
+  <text x="184" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#f85149" text-anchor="middle">+5V coupé</text>
+
+  <!-- ACS712 -->
+  <rect x="220" y="50" width="130" height="60" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="285" y="76" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#58a6ff" text-anchor="middle">ACS712</text>
+  <text x="285" y="93" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Capteur effet Hall</text>
+  <text x="285" y="107" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">185 mV/A · plage 5A</text>
+
+  <!-- flèche ACS712 → Arduino (OUT→A0, jaune) -->
+  <line x1="350" y1="80" x2="418" y2="80" stroke="#8b949e" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="384" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">OUT → A0</text>
+
+  <!-- ARDUINO -->
+  <rect x="420" y="50" width="130" height="60" rx="8" fill="#161b22" stroke="#e3b341" stroke-width="2"/>
+  <text x="485" y="76" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#e3b341" text-anchor="middle">Arduino Uno</text>
+  <text x="485" y="93" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Lecture analogique A0</text>
+  <text x="485" y="107" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">9600 bauds série</text>
+
+  <!-- flèche Arduino → PC (USB, bleu) -->
+  <line x1="550" y1="80" x2="618" y2="80" stroke="#58a6ff" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-blue)"/>
+  <text x="584" y="72" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#58a6ff" text-anchor="middle">USB série</text>
+
+  <!-- PC UBUNTU -->
+  <rect x="620" y="50" width="62" height="60" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="651" y="76" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" font-weight="700" fill="#3fb950" text-anchor="middle">PC</text>
+  <text x="651" y="91" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Ubuntu</text>
+  <text x="651" y="104" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Wireshark</text>
+
+  <!-- label réseau sous la ligne -->
+  <line x1="85" y1="130" x2="651" y2="130" stroke="#30363d" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="368" y="148" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Réseau LAN — capture Wireshark depuis le PC (eth0)</text>
+  <!-- petites flèches réseau -->
+  <line x1="85" y1="110" x2="85" y2="128" stroke="#30363d" stroke-width="1"/>
+  <line x1="651" y1="110" x2="651" y2="128" stroke="#30363d" stroke-width="1"/>
+</svg>

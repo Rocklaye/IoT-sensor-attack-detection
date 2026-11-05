@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="Infrastructure réseau : PC Ubuntu central connecté via Ethernet à Raspberry Pi, Caméra IP et Kali Linux, et via Wi-Fi au réseau shadow">
+
+  <defs>
+    <marker id="ae" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0,7 3,0 6" fill="#3fb950"/>
+    </marker>
+    <marker id="aw" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0,7 3,0 6" fill="#58a6ff"/>
+    </marker>
+    <marker id="ak" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <polygon points="0 0,7 3,0 6" fill="#bc8cff"/>
+    </marker>
+  </defs>
+
+  <rect width="700" height="200" fill="#0d1117"/>
+
+  <!-- PC UBUNTU — centre -->
+  <rect x="270" y="70" width="160" height="60" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="350" y="95" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#58a6ff" text-anchor="middle">PC Ubuntu 22.04</text>
+  <text x="350" y="111" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">10.42.0.1 · Wireshark · DHCP</text>
+  <text x="350" y="124" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#3fb950" text-anchor="middle">hotspot eth0 · wlan0 "shadow"</text>
+
+  <!-- RASPBERRY PI — gauche -->
+  <rect x="20" y="70" width="140" height="55" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="90" y="94" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#3fb950" text-anchor="middle">Raspberry Pi 4</text>
+  <text x="90" y="110" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">10.42.0.241</text>
+  <text x="90" y="123" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">SSH · eth0 + wlan0</text>
+
+  <!-- flèche Pi ↔ PC (Ethernet) -->
+  <line x1="160" y1="97" x2="270" y2="97" stroke="#3fb950" stroke-width="2" marker-end="url(#ae)"/>
+  <text x="215" y="90" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#3fb950" text-anchor="middle">Ethernet</text>
+
+  <!-- CAMERA IP — bas-gauche -->
+  <rect x="20" y="150" width="140" height="42" rx="8" fill="#161b22" stroke="#f0883e" stroke-width="2"/>
+  <text x="90" y="169" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#f0883e" text-anchor="middle">Caméra IP</text>
+  <text x="90" y="184" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">10.42.0.234 · Wi-Fi "shadow"</text>
+
+  <!-- flèche Camera ↔ PC (Wi-Fi) -->
+  <path d="M 160 171 Q 215 155 270 115" stroke="#f0883e" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <text x="215" y="162" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#f0883e" text-anchor="middle">Wi-Fi "shadow"</text>
+
+  <!-- KALI LINUX — droite -->
+  <rect x="540" y="70" width="140" height="55" rx="8" fill="#161b22" stroke="#bc8cff" stroke-width="2"/>
+  <text x="610" y="94" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#bc8cff" text-anchor="middle">Kali Linux</text>
+  <text x="610" y="110" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">10.42.0.11 · Attaquant</text>
+  <text x="610" y="123" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Hydra · hping3 · aireplay</text>
+
+  <!-- flèche Kali ↔ PC (Ethernet) -->
+  <line x1="430" y1="97" x2="540" y2="97" stroke="#bc8cff" stroke-width="2" marker-end="url(#ak)"/>
+  <text x="485" y="90" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#bc8cff" text-anchor="middle">Ethernet</text>
+
+  <!-- ARDUINO — bas-droite -->
+  <rect x="540" y="150" width="140" height="42" rx="8" fill="#161b22" stroke="#e3b341" stroke-width="2"/>
+  <text x="610" y="169" font-family="'Segoe UI',system-ui,sans-serif" font-size="12" font-weight="700" fill="#e3b341" text-anchor="middle">Arduino Uno</text>
+  <text x="610" y="184" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">ACS712 · USB série</text>
+
+  <!-- flèche Arduino ↔ PC (USB) -->
+  <path d="M 540 171 Q 485 155 430 115" stroke="#e3b341" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <text x="485" y="162" font-family="'Segoe UI',system-ui,sans-serif" font-size="9" fill="#e3b341" text-anchor="middle">USB série</text>
+
+  <!-- Label réseau isolé -->
+  <rect x="270" y="8" width="160" height="22" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="350" y="23" font-family="'Segoe UI',system-ui,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Réseau isolé · 10.42.0.0/24</text>
+</svg>
