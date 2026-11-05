@@ -1,0 +1,29 @@
+# Captures Wireshark (fichiers volumineux, données sensibles)
+*.pcap
+*.pcapng
+*.cap
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+
+# Arduino IDE
+*.elf
+*.hex
+build/
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Journaux et fichiers temporaires
+*.log
+*.tmp
+mesures_*_[0-9]*.csv

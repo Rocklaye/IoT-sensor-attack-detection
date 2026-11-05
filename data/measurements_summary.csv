@@ -1,0 +1,8 @@
+dispositif,etat,etiquette,courant_min_A,courant_moy_A,courant_max_A,courant_ecart_type,nb_echantillons,notes
+Caméra IP Hosafe HX-2PT1,veille,É1_veille,0.07,0.08,0.10,0.009,300,"Caméra allumée, Wi-Fi connecté, aucun spectateur. Activité minimale : keepalive Wi-Fi + DHCP/mDNS périodique."
+Caméra IP Hosafe HX-2PT1,utilisation_normale,É2_streaming,0.20,0.21,0.25,0.015,300,"Client en train de visionner le flux RTSP. +160% vs veille. CPU occupé par l'encodage H.264 et la transmission Wi-Fi."
+Caméra IP Hosafe HX-2PT1,brute_force,É3_bruteforce,0.09,0.10,0.12,0.008,300,"Brute-force HTTP-GET Hydra (1 thread, délai 2s). +20% vs veille. CPU traite des requêtes d'authentification Basic successives."
+Caméra IP Hosafe HX-2PT1,dos_inondation_syn,É4_dos,0.11,0.12,0.13,0.007,300,"Inondation SYN hping3 -i u1000 (1000 pqts/s) sur port 80. +30% vs veille. Pile réseau saturée ; flux vidéo gelé."
+Raspberry Pi 4,veille,Pi_veille,0.28,0.30,0.36,0.018,300,"Pi sous Raspberry Pi OS avec services standard. SSH ouvert. Activité de fond légère."
+Raspberry Pi 4,cryptojacking,Pi_cryptojacking,0.83,0.92,1.01,0.040,300,"XMRig (build ARM) minage Monero en arrière-plan. 97,6% CPU. Service déguisé en system_update_daemon. +200% vs veille."
+Raspberry Pi 4,dos_wifi_deauth,Pi_dos_wifi,0.33,0.37,0.40,0.020,300,"Inondation deauth aireplay-ng ciblant le MAC Pi E4:5F:01:C8:64:8B. Hausse modérée due aux tentatives de reconnexion."
