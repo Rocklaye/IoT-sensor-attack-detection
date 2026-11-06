@@ -27,3 +27,10 @@ Thumbs.db
 *.log
 *.tmp
 mesures_*_[0-9]*.csv
+
+# Éditeurs / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
