@@ -1,4 +1,51 @@
-# Détection d'attaques sur capteurs IoT - Analyse énergétique et trafic réseau
+# Détection d'attaques sur capteurs IoT — Analyse énergétique et trafic réseau
+
+> **Détecter une cyberattaque sur un dispositif IoT sans jamais installer d'agent dessus**, en corrélant deux signaux hors-bande : la consommation électrique (capteur ACS712) et le trafic réseau (Wireshark).
+
+![Arduino](https://img.shields.io/badge/Arduino-Uno%20%C2%B7%20ACS712-00979D?logo=arduino&logoColor=white)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-4%20%C2%B7%20Bookworm-A22846?logo=raspberrypi&logoColor=white)
+![Wireshark](https://img.shields.io/badge/Wireshark-analyse%20trafic-1679A7?logo=wireshark&logoColor=white)
+![Kali Linux](https://img.shields.io/badge/Kali%20Linux-plateforme%20d'attaque-557C94?logo=kalilinux&logoColor=white)
+![Python](https://img.shields.io/badge/Python-scripts-3776AB?logo=python&logoColor=white)
+![Statut](https://img.shields.io/badge/statut-termin%C3%A9-success)
+![Licence](https://img.shields.io/badge/usage-recherche%20%26%20%C3%A9ducation-informational)
+
+---
+
+## 🎯 Objectif
+
+Évaluer s'il est possible de **détecter une intrusion sur un capteur IoT depuis l'extérieur du dispositif**, dans un laboratoire physique isolé. L'étude mesure l'empreinte de quatre attaques (brute-force HTTP, DoS SYN, cryptojacking XMR, deauth Wi-Fi) sur deux signaux observables sans agent : la **consommation électrique** et le **trafic réseau**, puis compare leur fiabilité respective.
+
+## 🏗️ Architecture du laboratoire
+
+```
+                 ┌───────────────────────────────┐
+                 │  PC Ubuntu 22.04 (surveillance)│
+                 │  passerelle + Wireshark + IDE  │
+                 └───────────────┬───────────────┘
+      Hotspot Ubuntu / segment isolé (sans accès Internet)
+   ┌───────────────┬────────────┴──────────┬─────────────────┐
+   │               │                        │                 │
+┌──┴───────┐  ┌────┴─────┐          ┌───────┴──────┐   ┌──────┴──────┐
+│ Caméra IP│  │Raspberry │          │ Arduino Uno  │   │ Kali Linux  │
+│  Hosafe  │  │  Pi 4    │          │  + ACS712    │   │ (attaquant) │
+│(cible 1) │  │(cible 2) │          │ mesure 5V en │   │ Hydra·hping3│
+└──────────┘  └──────────┘          │   série      │   │ XMRig·aireplay
+                                     └──────────────┘   └─────────────┘
+```
+
+- **Hotspot Ubuntu** : le PC de surveillance héberge le réseau et sert de passerelle → il voit tout le trafic du segment via Wireshark.
+- **Raspberry Pi 4 + caméra IP Hosafe** : les cibles IoT surveillées.
+- **Arduino Uno + ACS712** : mesure hors-bande du courant (+5V en série) renvoyée au PC par port série.
+- Schémas détaillés : [`docs/hardware_overview.svg`](docs/hardware_overview.svg) · [`docs/network_overview.svg`](docs/network_overview.svg)
+
+## ✅ Prérequis
+
+- Arduino IDE 2.3.x, capteur **ACS712 5A** et Arduino Uno pour l'acquisition de courant
+- Python 3 avec `pyserial`, `pandas`, `matplotlib` (scripts [`scripts/`](scripts/))
+- Wireshark pour la capture réseau sur le segment du laboratoire
+- Un **réseau de laboratoire isolé** (aucun dispositif exposé à Internet)
+
 ---
 
 ## Le problème
@@ -189,7 +236,7 @@ Les 300 échantillons moyennés donnent une lecture stable (~1 lecture/seconde) 
 ## Structure du dépôt
 
 ```
-iot-attack-detection/
+IoT-sensor-attack-detection/
 ├── arduino/
 │   └── current_sensor.ino         # Sketch Arduino — acquisition ACS712
 ├── scripts/
