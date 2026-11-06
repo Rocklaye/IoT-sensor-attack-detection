@@ -218,13 +218,12 @@ iot-attack-detection/
 
 ---
 ## Contexte académique
-fwfwrv
+Ce projet a été réalisé dans un environnement expérimental isolé - réseau privé, aucun dispositif exposé sur Internet. Toutes les attaques ont été conduites à des fins de recherche uniquement.
 
 
 ## Contexte académique
 
-Anomalie réseau **+** pic énergétique corrélé → haute confiance, peu de faux positifs. Cette approche double-signal est déployable sur n'importe quelle infrastructure IoT PoE sans agent sur l'endpoint, depuis un switch avec port SPAN sur le VLAN de surveillance.
-Ce projet a été réalisé dans un environnement expérimental isolé - réseau privé, aucun dispositif exposé sur Internet. Toutes les attaques ont été conduites à des fins de recherche uniquement.
+
 ---
 
 ## Références
