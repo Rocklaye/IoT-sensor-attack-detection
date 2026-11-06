@@ -58,11 +58,11 @@ Le réseau de laboratoire a été monté et configuré manuellement pour reprodu
 
 Pour chaque scénario, nous avons suivi le même protocole :
 
-1. **Ligne de base** — 2 min de stabilisation, puis 300 lectures de courant (~5 min)
-2. **Lancement de l'attaque** — depuis Kali Linux, sur la cible choisie
-3. **Mesure sous attaque** — 300 nouvelles lectures pendant que l'attaque est active
-4. **Capture réseau simultanée** — Wireshark sur `eth0` pendant toute la durée
-5. **Retour à la normale** — vérification que la consommation revient à la ligne de base
+1. **Ligne de base** - 2 min de stabilisation, puis 300 lectures de courant (~5 min)
+2. **Lancement de l'attaque** - depuis Kali Linux, sur la cible choisie
+3. **Mesure sous attaque** - 300 nouvelles lectures pendant que l'attaque est active
+4. **Capture réseau simultanée** - Wireshark sur `eth0` pendant toute la durée
+5. **Retour à la normale** - vérification que la consommation revient à la ligne de base
 
 Quatre attaques ont été testées :
 
@@ -109,8 +109,8 @@ hping3 192.168.137.41 -S -p 80 -i u1000
 
 | Attaque | Signature électrique | Signature réseau |
 |---------|---------------------|-----------------|
-| Cryptojacking (XMRig) | +200% vs veille — 97,6% CPU soutenu | Connexions sortantes persistantes vers pool de minage |
-| DoS Wi-Fi (deauth) | Légère hausse — tentatives de reconnexion | Trames association/désassociation répétées |
+| Cryptojacking (XMRig) | +200% vs veille - 97,6% CPU soutenu | Connexions sortantes persistantes vers pool de minage |
+| DoS Wi-Fi (deauth) | Légère hausse - tentatives de reconnexion | Trames association/désassociation répétées |
 
 **Cryptojacking :**
 ```bash
@@ -219,10 +219,6 @@ iot-attack-detection/
 ---
 ## Contexte académique
 Ce projet a été réalisé dans un environnement expérimental isolé - réseau privé, aucun dispositif exposé sur Internet. Toutes les attaques ont été conduites à des fins de recherche uniquement.
-
-
-## Contexte académique
-
 
 ---
 
