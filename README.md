@@ -1,6 +1,6 @@
 # Détection d'attaques sur capteurs IoT — Analyse énergétique et trafic réseau
 
-> **Détecter une cyberattaque sur un dispositif IoT sans jamais installer d'agent dessus**, en corrélant deux signaux hors-bande : la consommation électrique (capteur ACS712) et le trafic réseau (Wireshark).
+> **Détecter une cyberattaque sur un dispositif IoT sans jamais installer d'agent dessus**, en corrélant deux signaux hors-bande : la consommation énergetique (capteur ACS712) et le trafic réseau.
 
 ![Arduino](https://img.shields.io/badge/Arduino-Uno%20%C2%B7%20ACS712-00979D?logo=arduino&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-4%20%C2%B7%20Bookworm-A22846?logo=raspberrypi&logoColor=white)
